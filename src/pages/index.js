@@ -4,7 +4,8 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import MainLayout from "@/components/layout";
 import { Layout } from "antd";
-import FeaturedCategory from "@/components/Featured/FeaturedProducts";
+import FeaturedCategory from "@/components/Featured/FeaturedCategory";
+import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
     <>
       <div>this is home</div>
       <FeaturedCategory />
+      <FeaturedProducts />
       <div
         class="p-item"
         style={{

@@ -1,0 +1,38 @@
+[
+  {
+    "category_id": 1,
+    "category_name": "cpu",
+    "category_description": "cpu description",
+    "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp"
+  },
+  {
+    "category_id": 2,
+    "category_name": "gpu",
+    "category_description": "gpu description",
+    "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp"
+  },
+  {
+    "category_id": 3,
+    "category_name": "ram",
+    "category_description": "ram description",
+    "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp"
+  },
+  {
+    "category_id": 4,
+    "category_name": "motherboard",
+    "category_description": "motherboard description",
+    "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg"
+  },
+  {
+    "category_id": 5,
+    "category_name": "storage",
+    "category_description": "storage description",
+    "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp"
+  },
+  {
+    "category_id": 6,
+    "category_name": "power-supply",
+    "category_description": "power supply description",
+    "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp"
+  }
+]

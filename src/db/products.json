@@ -1,0 +1,536 @@
+[
+  {
+    "category_id": 1,
+    "category_name": "cpu",
+    "category_description": "cpu description",
+    "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp",
+    "products": [
+      {
+        "product_name": "Intel Core i9-10900K",
+        "product_description": "Intel Core i9-10900K",
+        "product_image": "https://i.ibb.co/kK3bNMj/core-i9-10900k-1-100842115-large.jpg",
+        "product_price": 499.99,
+        "product_stock": 10,
+        "product_category": "cpu",
+        "product_status": "available",
+        "rating": 4.5,
+        "reviews_count": 10,
+        "reviews": [
+          {
+            "review_id": 1,
+            "reviewer_name": "John Doe",
+            "reviewer_email": " john@doe.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Great product"
+          },
+          {
+            "review_id": 2,
+            "reviewer_name": "Jane Doe",
+            "reviewer_email": " john@doe.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Great product"
+          }
+        ]
+      },
+      {
+        "product_name": "AMD Ryzen 9 5900X",
+        "product_description": "AMD Ryzen 9 5900X",
+        "product_image": "https://i.ibb.co/mFPNhCD/AMD-Ryzen-9-5900-X-review-1212x681.jpg",
+        "product_price": 549.99,
+        "product_stock": 15,
+        "product_category": "cpu",
+        "product_status": "available",
+        "rating": 4.8,
+        "reviews_count": 12,
+        "reviews": [
+          {
+            "review_id": 3,
+            "reviewer_name": "Alice Smith",
+            "reviewer_email": "alice@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "Excellent CPU! Highly recommended."
+          },
+          {
+            "review_id": 4,
+            "reviewer_name": "Bob Johnson",
+            "reviewer_email": "bob@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Fast and powerful processor."
+          }
+        ]
+      },
+      {
+        "product_name": "AMD Ryzen 7 5800X",
+        "product_description": "AMD Ryzen 7 5800X",
+        "product_image": "https://i.ibb.co/5R0hd6x/0x0.jpg",
+        "product_price": 449.99,
+        "product_stock": 20,
+        "product_category": "cpu",
+        "product_status": "available",
+        "rating": 4.6,
+        "reviews_count": 8,
+        "reviews": [
+          {
+            "review_id": 5,
+            "reviewer_name": "Emily Davis",
+            "reviewer_email": "emily@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Great value for the performance!"
+          },
+          {
+            "review_id": 6,
+            "reviewer_name": "Chris Wilson",
+            "reviewer_email": "chris@example.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Solid CPU for gaming and multitasking."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 2,
+    "category_name": "gpu",
+    "category_description": "gpu description",
+    "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp",
+    "products": [
+      {
+        "product_name": "NVIDIA GeForce RTX 3080",
+        "product_description": "NVIDIA GeForce RTX 3080",
+        "product_image": "https://i.ibb.co/xyz123/rtx-3080.jpg",
+        "product_price": 799.99,
+        "product_stock": 8,
+        "product_category": "gpu",
+        "product_status": "available",
+        "rating": 4.9,
+        "reviews_count": 15,
+        "reviews": [
+          {
+            "review_id": 7,
+            "reviewer_name": "David Wilson",
+            "reviewer_email": "david@example.com",
+            "reviewer_rating": 4.9,
+            "reviewer_comment": "Incredible graphics card!"
+          },
+          {
+            "review_id": 8,
+            "reviewer_name": "Sarah Brown",
+            "reviewer_email": "sarah@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "Best GPU I've ever owned."
+          }
+        ]
+      },
+      {
+        "product_name": "AMD Radeon RX 6900 XT",
+        "product_description": "AMD Radeon RX 6900 XT",
+        "product_image": "https://i.ibb.co/abc456/rx-6900-xt.jpg",
+        "product_price": 749.99,
+        "product_stock": 10,
+        "product_category": "gpu",
+        "product_status": "available",
+        "rating": 4.7,
+        "reviews_count": 12,
+        "reviews": [
+          {
+            "review_id": 9,
+            "reviewer_name": "Michael Johnson",
+            "reviewer_email": "michael@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Great GPU for gaming and productivity."
+          },
+          {
+            "review_id": 10,
+            "reviewer_name": "Linda Smith",
+            "reviewer_email": "linda@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Impressive performance!"
+          }
+        ]
+      },
+      {
+        "product_name": "ASUS ROG Strix GeForce RTX 3070",
+        "product_description": "ASUS ROG Strix GeForce RTX 3070",
+        "product_image": "https://i.ibb.co/def789/rog-strix-rtx-3070.jpg",
+        "product_price": 599.99,
+        "product_stock": 12,
+        "product_category": "gpu",
+        "product_status": "available",
+        "rating": 4.8,
+        "reviews_count": 10,
+        "reviews": [
+          {
+            "review_id": 11,
+            "reviewer_name": "Emily Davis",
+            "reviewer_email": "emily@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "Top-notch GPU, runs everything smoothly."
+          },
+          {
+            "review_id": 12,
+            "reviewer_name": "Robert Johnson",
+            "reviewer_email": "robert@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Great value for the performance!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 3,
+    "category_name": "ram",
+    "category_description": "ram description",
+    "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp",
+    "products": [
+      {
+        "product_name": "Corsair Vengeance LPX 16GB DDR4",
+        "product_description": "Corsair Vengeance LPX 16GB DDR4 RAM",
+        "product_image": "https://i.ibb.co/xyz123/corsair-vengeance-ram.jpg",
+        "product_price": 89.99,
+        "product_stock": 20,
+        "product_category": "ram",
+        "product_status": "available",
+        "rating": 4.5,
+        "reviews_count": 8,
+        "reviews": [
+          {
+            "review_id": 13,
+            "reviewer_name": "Jennifer Lee",
+            "reviewer_email": "jennifer@example.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Reliable RAM, good performance."
+          },
+          {
+            "review_id": 14,
+            "reviewer_name": "Daniel Brown",
+            "reviewer_email": "daniel@example.com",
+            "reviewer_rating": 4.4,
+            "reviewer_comment": "Great value for money."
+          }
+        ]
+      },
+      {
+        "product_name": "G.Skill Trident Z RGB 32GB DDR4",
+        "product_description": "G.Skill Trident Z RGB 32GB DDR4 RAM",
+        "product_image": "https://i.ibb.co/abc456/gskill-trident-ram.jpg",
+        "product_price": 129.99,
+        "product_stock": 15,
+        "product_category": "ram",
+        "product_status": "available",
+        "rating": 4.6,
+        "reviews_count": 10,
+        "reviews": [
+          {
+            "review_id": 15,
+            "reviewer_name": "Mark Wilson",
+            "reviewer_email": "mark@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Beautiful and fast RAM."
+          },
+          {
+            "review_id": 16,
+            "reviewer_name": "Laura Davis",
+            "reviewer_email": "laura@example.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Impressive RGB lighting."
+          }
+        ]
+      },
+      {
+        "product_name": "Kingston HyperX Fury 8GB DDR4",
+        "product_description": "Kingston HyperX Fury 8GB DDR4 RAM",
+        "product_image": "https://i.ibb.co/def789/kingston-hyperx-ram.jpg",
+        "product_price": 49.99,
+        "product_stock": 25,
+        "product_category": "ram",
+        "product_status": "available",
+        "rating": 4.3,
+        "reviews_count": 6,
+        "reviews": [
+          {
+            "review_id": 17,
+            "reviewer_name": "Alex Johnson",
+            "reviewer_email": "alex@example.com",
+            "reviewer_rating": 4.3,
+            "reviewer_comment": "Affordable RAM, decent performance."
+          },
+          {
+            "review_id": 18,
+            "reviewer_name": "Megan Smith",
+            "reviewer_email": "megan@example.com",
+            "reviewer_rating": 4.2,
+            "reviewer_comment": "Good for basic tasks."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 4,
+    "category_name": "motherboard",
+    "category_description": "motherboard description",
+    "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg",
+    "products": [
+      {
+        "product_name": "ASUS ROG Strix Z590-E",
+        "product_description": "ASUS ROG Strix Z590-E Motherboard",
+        "product_image": "https://i.ibb.co/xyz123/asus-rog-strix-mobo.jpg",
+        "product_price": 299.99,
+        "product_stock": 12,
+        "product_category": "motherboard",
+        "product_status": "available",
+        "rating": 4.7,
+        "reviews_count": 12,
+        "reviews": [
+          {
+            "review_id": 19,
+            "reviewer_name": "John Doe",
+            "reviewer_email": "johndoe@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Great motherboard for gaming builds."
+          },
+          {
+            "review_id": 20,
+            "reviewer_name": "Jane Smith",
+            "reviewer_email": "janesmith@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Excellent features and performance."
+          }
+        ]
+      },
+      {
+        "product_name": "MSI B450 TOMAHAWK MAX",
+        "product_description": "MSI B450 TOMAHAWK MAX Motherboard",
+        "product_image": "https://i.ibb.co/abc456/msi-b450-mobo.jpg",
+        "product_price": 129.99,
+        "product_stock": 18,
+        "product_category": "motherboard",
+        "product_status": "available",
+        "rating": 4.4,
+        "reviews_count": 9,
+        "reviews": [
+          {
+            "review_id": 21,
+            "reviewer_name": "Michael Wilson",
+            "reviewer_email": "michaelwilson@example.com",
+            "reviewer_rating": 4.4,
+            "reviewer_comment": "Solid budget-friendly choice."
+          },
+          {
+            "review_id": 22,
+            "reviewer_name": "Emily Davis",
+            "reviewer_email": "emilydavis@example.com",
+            "reviewer_rating": 4.3,
+            "reviewer_comment": "Gets the job done."
+          }
+        ]
+      },
+      {
+        "product_name": "Gigabyte Aorus X570 Master",
+        "product_description": "Gigabyte Aorus X570 Master Motherboard",
+        "product_image": "https://i.ibb.co/def789/gigabyte-x570-mobo.jpg",
+        "product_price": 349.99,
+        "product_stock": 10,
+        "product_category": "motherboard",
+        "product_status": "available",
+        "rating": 4.8,
+        "reviews_count": 15,
+        "reviews": [
+          {
+            "review_id": 23,
+            "reviewer_name": "Chris Johnson",
+            "reviewer_email": "chrisjohnson@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "High-end motherboard with great performance."
+          },
+          {
+            "review_id": 24,
+            "reviewer_name": "Linda Smith",
+            "reviewer_email": "lindasmith@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Impressive build quality."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 5,
+    "category_name": "storage",
+    "category_description": "storage description",
+    "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp",
+    "products": [
+      {
+        "product_name": "Samsung 970 EVO 1TB NVMe SSD",
+        "product_description": "Samsung 970 EVO 1TB NVMe SSD",
+        "product_image": "https://i.ibb.co/xyz123/samsung-970-evo-ssd.jpg",
+        "product_price": 149.99,
+        "product_stock": 15,
+        "product_category": "storage",
+        "product_status": "available",
+        "rating": 4.9,
+        "reviews_count": 13,
+        "reviews": [
+          {
+            "review_id": 25,
+            "reviewer_name": "David Wilson",
+            "reviewer_email": "davidwilson@example.com",
+            "reviewer_rating": 4.9,
+            "reviewer_comment": "Blazing fast storage solution!"
+          },
+          {
+            "review_id": 26,
+            "reviewer_name": "Sarah Brown",
+            "reviewer_email": "sarahbrown@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "Excellent SSD for the price."
+          }
+        ]
+      },
+      {
+        "product_name": "Western Digital WD Blue 2TB HDD",
+        "product_description": "Western Digital WD Blue 2TB HDD",
+        "product_image": "https://i.ibb.co/abc456/wd-blue-hdd.jpg",
+        "product_price": 79.99,
+        "product_stock": 20,
+        "product_category": "storage",
+        "product_status": "available",
+        "rating": 4.6,
+        "reviews_count": 11,
+        "reviews": [
+          {
+            "review_id": 27,
+            "reviewer_name": "Jennifer Smith",
+            "reviewer_email": "jennifersmith@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Reliable and spacious HDD."
+          },
+          {
+            "review_id": 28,
+            "reviewer_name": "Mark Davis",
+            "reviewer_email": "markdavis@example.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Great for storage-intensive tasks."
+          }
+        ]
+      },
+      {
+        "product_name": "Crucial MX500 500GB SATA SSD",
+        "product_description": "Crucial MX500 500GB SATA SSD",
+        "product_image": "https://i.ibb.co/def789/crucial-mx500-ssd.jpg",
+        "product_price": 69.99,
+        "product_stock": 25,
+        "product_category": "storage",
+        "product_status": "available",
+        "rating": 4.4,
+        "reviews_count": 9,
+        "reviews": [
+          {
+            "review_id": 29,
+            "reviewer_name": "Alex Johnson",
+            "reviewer_email": "alexjohnson@example.com",
+            "reviewer_rating": 4.4,
+            "reviewer_comment": "Affordable and reliable SSD."
+          },
+          {
+            "review_id": 30,
+            "reviewer_name": "Megan Wilson",
+            "reviewer_email": "meganwilson@example.com",
+            "reviewer_rating": 4.3,
+            "reviewer_comment": "Good for everyday use."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_id": 6,
+    "category_name": "power-supply",
+    "category_description": "power supply description",
+    "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp",
+    "products": [
+      {
+        "product_name": "EVGA SuperNOVA 750W 80+ Gold PSU",
+        "product_description": "EVGA SuperNOVA 750W 80+ Gold PSU",
+        "product_image": "https://i.ibb.co/xyz123/evga-supernova-psu.jpg",
+        "product_price": 119.99,
+        "product_stock": 15,
+        "product_category": "power-supply",
+        "product_status": "available",
+        "rating": 4.7,
+        "reviews_count": 10,
+        "reviews": [
+          {
+            "review_id": 31,
+            "reviewer_name": "Daniel Smith",
+            "reviewer_email": "danielsmith@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Reliable and efficient PSU."
+          },
+          {
+            "review_id": 32,
+            "reviewer_name": "Sophia Johnson",
+            "reviewer_email": "sophiajohnson@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Great power supply for gaming rigs."
+          }
+        ]
+      },
+      {
+        "product_name": "Corsair RM850x 850W 80+ Gold PSU",
+        "product_description": "Corsair RM850x 850W 80+ Gold PSU",
+        "product_image": "https://i.ibb.co/abc456/corsair-rm850x-psu.jpg",
+        "product_price": 139.99,
+        "product_stock": 12,
+        "product_category": "power-supply",
+        "product_status": "available",
+        "rating": 4.8,
+        "reviews_count": 11,
+        "reviews": [
+          {
+            "review_id": 33,
+            "reviewer_name": "Oliver Davis",
+            "reviewer_email": "oliverdavis@example.com",
+            "reviewer_rating": 4.8,
+            "reviewer_comment": "Corsair quality, reliable performance."
+          },
+          {
+            "review_id": 34,
+            "reviewer_name": "Ella Wilson",
+            "reviewer_email": "ellawilson@example.com",
+            "reviewer_rating": 4.7,
+            "reviewer_comment": "Runs quietly and efficiently."
+          }
+        ]
+      },
+      {
+        "product_name": "Seasonic Focus GX-650 650W 80+ Gold PSU",
+        "product_description": "Seasonic Focus GX-650 650W 80+ Gold PSU",
+        "product_image": "https://i.ibb.co/def789/seasonic-focus-psu.jpg",
+        "product_price": 109.99,
+        "product_stock": 18,
+        "product_category": "power-supply",
+        "product_status": "available",
+        "rating": 4.6,
+        "reviews_count": 9,
+        "reviews": [
+          {
+            "review_id": 35,
+            "reviewer_name": "Liam Smith",
+            "reviewer_email": "liamsmith@example.com",
+            "reviewer_rating": 4.6,
+            "reviewer_comment": "Reliable PSU with a fair price."
+          },
+          {
+            "review_id": 36,
+            "reviewer_name": "Ava Johnson",
+            "reviewer_email": "avajohnson@example.com",
+            "reviewer_rating": 4.5,
+            "reviewer_comment": "Good choice for mid-range builds."
+          }
+        ]
+      }
+    ]
+  }
+]

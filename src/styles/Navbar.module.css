@@ -10,6 +10,9 @@
   top: 0;
   margin-bottom: 20px;
   z-index: 99990;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navHeader {
@@ -21,6 +24,7 @@
 .logo {
   width: 200px;
   float: left;
+  margin-top: -5px;
 }
 
 .logo a {
@@ -99,6 +103,7 @@
 
   .logo a {
     margin-left: -10px;
+    
   }
 
   .ant-drawer-title > .brandFont {

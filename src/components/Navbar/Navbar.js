@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, Button, Drawer } from "antd";
+import { Layout, Button, Drawer, ConfigProvider } from "antd";
 import LeftMenu from "./LeftMenu";
 import RightMenu from "./RightMenu";
 import { MenuOutlined } from "@ant-design/icons";
@@ -21,42 +21,54 @@ const Navbar = () => {
   // Upto here
 
   return (
-    <nav className={`${styles.navbar}`}>
-      <Layout>
-        <Layout.Header className={`${styles.navHeader}`}>
-          <div className={`${styles.logo}`}>
-            <h3 className={`${styles.brandFont}`}>Brand Here</h3>
-          </div>
-          <div className={`${styles.navbarMenu}`}>
-            <div className={`${styles.leftMenu}`}>
-              <LeftMenu mode={"horizontal"} />
+    <ConfigProvider
+      theme={{
+        components: {
+          Layout: {
+            /* here is your component tokens */
+            headerBg: "#f5f5f5",
+          },
+        },
+      }}
+    >
+      ...
+      <nav className={`${styles.navbar}`}>
+        <Layout>
+          <Layout.Header className={`${styles.navHeader}`}>
+            <div className={`${styles.logo}`}>
+              <h3 className={`${styles.brandFont}`}>ParadoxTech</h3>
             </div>
-            <Button
-              className={`${styles.menuButton}`}
-              type="text"
-              onClick={showDrawer}
-            >
-              <MenuOutlined />
-            </Button>
-            <div className={`${styles.rightMenu}`}>
-              <RightMenu mode={"horizontal"} />
-            </div>
+            <div className={`${styles.navbarMenu}`}>
+              <div className={`${styles.leftMenu}`}>
+                <LeftMenu mode={"horizontal"} />
+              </div>
+              <Button
+                className={`${styles.menuButton}`}
+                type="text"
+                onClick={showDrawer}
+              >
+                <MenuOutlined />
+              </Button>
+              <div className={`${styles.rightMenu}`}>
+                <RightMenu mode={"horizontal"} />
+              </div>
 
-            <Drawer
-              title={"Brand Here"}
-              placement="right"
-              closable={true}
-              onClose={showDrawer}
-              visible={visible}
-              style={{ zIndex: 99999 }}
-            >
-              <LeftMenu mode={"inline"} />
-              <RightMenu mode={"inline"} />
-            </Drawer>
-          </div>
-        </Layout.Header>
-      </Layout>
-    </nav>
+              <Drawer
+                title={"ParadoxTech"}
+                placement="right"
+                closable={true}
+                onClose={showDrawer}
+                visible={visible}
+                style={{ zIndex: 99999 }}
+              >
+                <LeftMenu mode={"inline"} />
+                <RightMenu mode={"inline"} />
+              </Drawer>
+            </div>
+          </Layout.Header>
+        </Layout>
+      </nav>
+    </ConfigProvider>
   );
 };
 

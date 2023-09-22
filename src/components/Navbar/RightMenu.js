@@ -1,27 +1,45 @@
 import { Menu, Avatar } from "antd";
-import { UserOutlined, CodeOutlined, LogoutOutlined } from "@ant-design/icons";
+import {
+  UserOutlined,
+  CodeOutlined,
+  LogoutOutlined,
+  GoogleOutlined,
+} from "@ant-design/icons";
+import { useSession, signIn, signOut } from "next-auth/react";
 import styles from "@/styles/Navbar.module.css";
+import Link from "next/link";
 const RightMenu = ({ mode }) => {
+  const { data: session } = useSession();
+
   return (
     <Menu mode={mode}>
-      <Menu.SubMenu
-        title={
-          <>
-            <Avatar icon={<UserOutlined />} />
-            <span className={`${styles.username}`}>John Doe</span>
-          </>
-        }
-      >
-        <Menu.Item key="project">
-          <CodeOutlined /> Projects
+      {!session ? (
+        <Menu.Item onClick={() => signIn("google")} key="login">
+          <GoogleOutlined /> Login
         </Menu.Item>
-        <Menu.Item key="about-us">
-          <UserOutlined /> Profile
-        </Menu.Item>
-        <Menu.Item key="log-out">
-          <LogoutOutlined /> Logout
-        </Menu.Item>
-      </Menu.SubMenu>
+      ) : (
+        <Menu.SubMenu
+          title={
+            <>
+              <Avatar icon={<UserOutlined />} />
+              <span className={`${styles.username}`}>John Doe</span>
+            </>
+          }
+        >
+          <Menu.Item key="project">
+            <CodeOutlined /> Projects
+          </Menu.Item>
+          <Menu.Item key="profile">
+            <Link href="/profile">
+              {" "}
+              <UserOutlined /> Profile
+            </Link>
+          </Menu.Item>
+          <Menu.Item onClick={() => signOut()} key="log-out">
+            <LogoutOutlined /> Logout
+          </Menu.Item>
+        </Menu.SubMenu>
+      )}
     </Menu>
   );
 };

@@ -14,7 +14,14 @@ const RightMenu = ({ mode }) => {
   return (
     <Menu mode={mode}>
       {!session ? (
-        <Menu.Item onClick={() => signIn("google")} key="login">
+        <Menu.Item
+          onClick={() =>
+            signIn("google", {
+              callbackUrl: process.env.NEXTAUTH_URL,
+            })
+          }
+          key="login"
+        >
           <GoogleOutlined /> Login
         </Menu.Item>
       ) : (

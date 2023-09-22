@@ -4,6 +4,7 @@ import LeftMenu from "./LeftMenu";
 import RightMenu from "./RightMenu";
 import { MenuOutlined } from "@ant-design/icons";
 import styles from "@/styles/Navbar.module.css";
+import { SessionProvider } from "next-auth/react";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -49,9 +50,11 @@ const Navbar = () => {
               >
                 <MenuOutlined />
               </Button>
-              <div className={`${styles.rightMenu}`}>
-                <RightMenu mode={"horizontal"} />
-              </div>
+              <SessionProvider>
+                <div className={`${styles.rightMenu}`}>
+                  <RightMenu mode={"horizontal"} />
+                </div>
+              </SessionProvider>
 
               <Drawer
                 title={"ParadoxTech"}
@@ -62,7 +65,8 @@ const Navbar = () => {
                 style={{ zIndex: 99999 }}
               >
                 <LeftMenu mode={"inline"} />
-                <RightMenu mode={"inline"} />
+                <SessionProvider><RightMenu mode={"inline"} /></SessionProvider>
+                
               </Drawer>
             </div>
           </Layout.Header>

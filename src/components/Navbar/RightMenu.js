@@ -10,7 +10,7 @@ import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 const RightMenu = ({ mode }) => {
   const { data: session } = useSession();
-
+  // console.log(session);
   return (
     <Menu mode={mode}>
       {!session ? (
@@ -21,8 +21,14 @@ const RightMenu = ({ mode }) => {
         <Menu.SubMenu
           title={
             <>
-              <Avatar icon={<UserOutlined />} />
-              <span className={`${styles.username}`}>John Doe</span>
+              {session?.user?.image ? (
+                <Avatar src={session?.user?.image} />
+              ) : (
+                <Avatar icon={<UserOutlined />} />
+              )}
+              <span className={`${styles.username}`}>
+                {session?.user?.name}
+              </span>
             </>
           }
         >

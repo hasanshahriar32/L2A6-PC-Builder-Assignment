@@ -6,19 +6,12 @@ import FeaturedCategory from "@/components/Featured/FeaturedCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 import HeroBanner from "@/components/Hero/Hero";
 
-export default function Page({ allCategory, featured }) {
+export default function Page({ allCategory }) {
   // console.log(allCategory, featured);
   return (
     <>
       <div>this is home</div>
-      <HeroBanner />
-      <h1 style={{ textAlign: "center" }}>Featured Prodects</h1>
-      <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
-        Some of our personalized products you might like exploring!
-      </p>
-      <FeaturedProducts featured={featured} />
       <FeaturedCategory allCategory={allCategory} />
-      
     </>
   );
 }
@@ -32,7 +25,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       allCategory: data.data,
-      featured: data2.data,
     },
     revalidate: 60,
   };
@@ -42,7 +34,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Head>
-        <title>PC Builder Paradox</title>
+        <title>Category List</title>
         <meta
           name="description"
           content="Welcome to our pc building platform. Here you can organize and purchase your desired pc at affordable rate."

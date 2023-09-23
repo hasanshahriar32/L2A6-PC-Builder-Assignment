@@ -6,35 +6,38 @@ import FeaturedCategory from "@/components/Featured/FeaturedCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 import HeroBanner from "@/components/Hero/Hero";
 
-export default function Page({ allCategory, featured }) {
-  // console.log(allCategory, featured);
+export default function Page({ featured }) {
+  console.log(featured);
   return (
     <>
-      <div>this is home</div>
-      <HeroBanner />
-      <h1 style={{ textAlign: "center" }}>Featured Prodects</h1>
+        <br />
+      <h1 style={{ textAlign: "center", marginTop: "20px" }}>
+        Category of {featured?.category_name}
+      </h1>
       <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
         Some of our personalized products you might like exploring!
       </p>
-      <FeaturedProducts featured={featured} />
-      <FeaturedCategory allCategory={allCategory} />
-      
+      <FeaturedProducts featured={featured?.products} />
     </>
   );
 }
-
-export const getStaticProps = async () => {
+export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.SERVER_URL}/api/category`);
+  const newses = await res.json();
+  const paths = newses?.data?.map((news) => ({
+    params: { id: news.category_id.toString() },
+  }));
+  return { paths, fallback: false };
+};
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const res = await fetch(
+    `${process.env.SERVER_URL}/api/products/${params.id}`
+  );
   const data = await res.json();
-  // console.log(data);
-  const res2 = await fetch(`${process.env.SERVER_URL}/api/products/featured`);
-  const data2 = await res2.json();
+
   return {
-    props: {
-      allCategory: data.data,
-      featured: data2.data,
-    },
-    revalidate: 60,
+    props: { featured: data.data },
   };
 };
 
@@ -42,7 +45,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Head>
-        <title>PC Builder Paradox</title>
+        <title>Category List</title>
         <meta
           name="description"
           content="Welcome to our pc building platform. Here you can organize and purchase your desired pc at affordable rate."

@@ -6,32 +6,26 @@ import FeaturedCategory from "@/components/Featured/FeaturedCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 import HeroBanner from "@/components/Hero/Hero";
 
-export default function Page({ allCategory, featured }) {
+export default function Page({ featured }) {
   // console.log(allCategory, featured);
   return (
     <>
-      <div>this is home</div>
-      <HeroBanner />
+      <br />
       <h1 style={{ textAlign: "center" }}>Featured Prodects</h1>
       <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
         Some of our personalized products you might like exploring!
       </p>
       <FeaturedProducts featured={featured} />
-      <FeaturedCategory allCategory={allCategory} />
       
     </>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.SERVER_URL}/api/category`);
-  const data = await res.json();
-  // console.log(data);
   const res2 = await fetch(`${process.env.SERVER_URL}/api/products/featured`);
   const data2 = await res2.json();
   return {
     props: {
-      allCategory: data.data,
       featured: data2.data,
     },
     revalidate: 60,

@@ -27,10 +27,7 @@ const FeaturedCategory = ({ featured }) => {
   const router = useRouter();
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Featured Prodects</h1>
-      <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
-        Some of our personalized products you might like exploring!
-      </p>
+      
       <div style={cardsStyle}>
         {featured?.map((item) => (
           <Card
@@ -67,7 +64,7 @@ const FeaturedCategory = ({ featured }) => {
                 />
               }
               title={
-                <Link href={`/product/${item?._id}`}>{item?.product_name}</Link>
+                <Link href={`/product/${item?.product_name}`}>{item?.product_name}</Link>
               }
               description={<div>
                 <h5>{`Price: ${item?.product_price}$`}</h5>

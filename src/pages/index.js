@@ -8,11 +8,11 @@ import FeaturedCategory from "@/components/Featured/FeaturedCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Page() {
+export default function Page({ allCategory }) {
   return (
     <>
       <div>this is home</div>
-      <FeaturedCategory />
+      <FeaturedCategory allCategory={allCategory} />
       <FeaturedProducts />
       <div
         class="p-item"
@@ -59,7 +59,7 @@ export default function Page() {
               />
             </a>
           </div>
-          <div  class="p-item-details">
+          <div class="p-item-details">
             <h4 class="p-item-name">
               {" "}
               <a href="https://www.startech.com.bd/dahua-imou-ranger-2-ip-camera-with-360-degree-coverage">
@@ -77,6 +77,17 @@ export default function Page() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${process.env.SERVER_URL}/api/category`);
+  const data = await res.json();
+  console.log(data);
+  return {
+    props: {
+      allCategory: data.data,
+    },
+  };
+};
 
 Page.getLayout = function getLayout(page) {
   return (

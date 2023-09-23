@@ -12,7 +12,7 @@ export default function Page({ featured }) {
     <>
         <br />
       <h1 style={{ textAlign: "center", marginTop: "20px" }}>
-        Category of {featured?.category_name}
+        Category of {featured?.product_name}
       </h1>
       <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
         Some of our personalized products you might like exploring!

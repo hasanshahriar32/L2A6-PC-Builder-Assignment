@@ -7,11 +7,12 @@ import styles from "@/styles/Navbar.module.css";
 import { SessionProvider } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-const Navbar = () => {
+const Navbar = ({ allCategory, isLoading }) => {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(!visible);
   };
+  // console.log(allCategory);
 
   // If you do not want to auto-close the mobile drawer when a path is selected
   // Delete or comment out the code block below
@@ -44,7 +45,6 @@ const Navbar = () => {
         },
       }}
     >
-      ...
       <nav className={`${styles.navbar}`}>
         <Layout>
           <Layout.Header className={`${styles.navHeader}`}>
@@ -55,7 +55,11 @@ const Navbar = () => {
             </div>
             <div className={`${styles.navbarMenu}`}>
               <div className={`${styles.leftMenu}`}>
-                <LeftMenu mode={"horizontal"} />
+                <LeftMenu
+                  allCategory={allCategory}
+                  isLoading={isLoading}
+                  mode={"horizontal"}
+                />
               </div>
               <Button
                 className={`${styles.menuButton}`}
@@ -75,10 +79,14 @@ const Navbar = () => {
                 placement="right"
                 closable={true}
                 onClose={showDrawer}
-                visible={visible}
+                open={visible}
                 style={{ zIndex: 99999 }}
               >
-                <LeftMenu mode={"inline"} />
+                <LeftMenu
+                  allCategory={allCategory}
+                  isLoading={isLoading}
+                  mode={"inline"}
+                />
                 <SessionProvider>
                   <RightMenu mode={"inline"} />
                 </SessionProvider>

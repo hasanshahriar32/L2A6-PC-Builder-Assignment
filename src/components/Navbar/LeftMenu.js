@@ -1,17 +1,31 @@
 import { Menu } from "antd";
-const LeftMenu = ({ mode }) => {
+import { useRouter } from "next/router";
+
+const LeftMenu = ({ mode, allCategory, isLoading }) => {
+  // console.log(allCategory);
+  const router = useRouter();
   return (
     <Menu mode={mode}>
       <Menu.Item key="buildPc"> PC Builder</Menu.Item>
       {/* write a submenu component  */}
-      <Menu.SubMenu title="Categories">
-        <Menu.Item key="CPU">CPU / Processor</Menu.Item>
-        <Menu.Item key="Motherboard">Motherboard</Menu.Item>
-        <Menu.Item key="RAM">RAM</Menu.Item>
-        <Menu.Item key="Power Supply Unit">Power Supply Unit</Menu.Item>
-        <Menu.Item key="Storage Device">Storage Device</Menu.Item>
-        <Menu.Item key="Monitor">Monitor</Menu.Item>
-        <Menu.Item key="Others">Others</Menu.Item>
+      <Menu.SubMenu  key="category" title="Categories">
+        {isLoading ? (
+          <Menu.Item key="loading">Loading..</Menu.Item>
+        ) : (
+          <>
+            {allCategory?.data?.map((category) => {
+              return (
+                <Menu.Item
+                  key={category._id}
+                  onClick={() => router.push(`/category/${category.category_id}`)}
+                >
+                  {category.category_name}
+                </Menu.Item>
+              );
+            })}
+            <Menu.Item key="other">Others</Menu.Item>
+          </>
+        )}
       </Menu.SubMenu>
 
       <Menu.Item key="about">About Us</Menu.Item>

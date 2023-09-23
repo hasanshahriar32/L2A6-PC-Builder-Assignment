@@ -15,7 +15,7 @@ export default function Page({ allCategory }) {
       <FeaturedCategory allCategory={allCategory} />
       <FeaturedProducts />
       <div
-        class="p-item"
+        className="p-item"
         style={{
           fontFamily: "Trebuchet MS,sans-serif",
           lineHeight: "1.15",
@@ -32,10 +32,10 @@ export default function Page({ allCategory }) {
           maxWidth: "25%",
         }}
       >
-        <div class="p-item-inner">
-          <div class="marks">
+        <div className="p-item-inner">
+          <div className="marks">
             <span
-              class="mark"
+              className="mark"
               style={{
                 position: "absolute",
                 top: "15px",
@@ -48,7 +48,7 @@ export default function Page({ allCategory }) {
               Save: 250৳
             </span>{" "}
           </div>
-          <div class="p-item-img">
+          <div className="p-item-img">
             {" "}
             <a href="https://www.startech.com.bd/dahua-imou-ranger-2-ip-camera-with-360-degree-coverage">
               <img
@@ -59,17 +59,17 @@ export default function Page({ allCategory }) {
               />
             </a>
           </div>
-          <div class="p-item-details">
-            <h4 class="p-item-name">
+          <div className="p-item-details">
+            <h4 className="p-item-name">
               {" "}
               <a href="https://www.startech.com.bd/dahua-imou-ranger-2-ip-camera-with-360-degree-coverage">
                 Dahua imou Ranger 2 IP Camera with 360 Degree Coverage
                 (IPC-A22EP/IPC-A22EP-G)
               </a>
             </h4>
-            <div class="p-item-price">
-              <span class="price-new">2,450৳</span>{" "}
-              <span class="price-old">2,700৳</span>
+            <div className="p-item-price">
+              <span className="price-new">2,450৳</span>{" "}
+              <span className="price-old">2,700৳</span>
             </div>
           </div>
         </div>

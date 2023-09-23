@@ -10,7 +10,7 @@ const gridStyle = {
 };
 
 const FeaturedCategory = ({ allCategory }) => {
-  console.log(allCategory);
+  // console.log(allCategory);
   return (
     <div className="m-home m-cat">
       <div className="cat-items-wrap">

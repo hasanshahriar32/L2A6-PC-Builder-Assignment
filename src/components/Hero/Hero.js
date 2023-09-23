@@ -3,10 +3,10 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Subtitle from "./components/Subtitle";
 
-const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
-const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
-const craterRock = "https://i.imgur.com/8DYumaY.jpg";
-const giauPass = "https://i.imgur.com/8IuucQZ.jpg";
+const bogliasco = "https://i.ibb.co/KrqS9q7/20-232-482-V02.jpg";
+const countyClare = "https://i.ibb.co/4MBNq7V/2020-09-28-16-24-50-Ge-Force-RTX-3080-GAMING-OC-10-G-Graphics-Card-GIGABYTE-Global.png";
+const craterRock = "https://i.ibb.co/mFPNhCD/AMD-Ryzen-9-5900-X-review-1212x681.jpg";
+const giauPass = "https://i.ibb.co/gFQmpVJ/Nvidia-RTX-3080-5.jpg";
 
 export default function HeroBanner() {
   return (
@@ -26,47 +26,45 @@ export default function HeroBanner() {
             nextSlide
           ),
         onAfterSliding: (nextSlide) =>
-          console.debug("onAfterSliding(nextSlide): ", nextSlide)
+          console.debug("onAfterSliding(nextSlide): ", nextSlide),
       }}
     >
       <Overlay>
         <Wrapper>
-          <Title>Basic Setup</Title>
-          <Subtitle>
-            Check out the documentation for more advanced examples.
-          </Subtitle>
+          <Title>Paradox Technology</Title>
+          <Subtitle>Build your dream PC anywhere, anytime.</Subtitle>
         </Wrapper>
       </Overlay>
 
       <Slide
         shouldRenderMask
-        label="Giau Pass - Italy"
+        label="Nvidia-RTX-3080-5"
         background={{
-          backgroundImageSrc: giauPass
+          backgroundImageSrc: giauPass,
         }}
       />
 
       <Slide
         shouldRenderMask
-        label="Bogliasco - Italy"
+        label="G.Skill Trident Z"
         background={{
-          backgroundImageSrc: bogliasco
+          backgroundImageSrc: bogliasco,
         }}
       />
 
       <Slide
         shouldRenderMask
-        label="County Clare - Ireland"
+        label="Ge-Force-RTX-3080"
         background={{
-          backgroundImageSrc: countyClare
+          backgroundImageSrc: countyClare,
         }}
       />
 
       <Slide
         shouldRenderMask
-        label="Crater Rock, OR - United States"
+        label="AMD-Ryzen-9-5900-X"
         background={{
-          backgroundImageSrc: craterRock
+          backgroundImageSrc: craterRock,
         }}
       />
 

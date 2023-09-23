@@ -14,12 +14,12 @@ async function dbConnection(req, res) {
     await client.connect();
     console.log("MongoDB connected successfully");
     const categoryCollection = client.db("paradox").collection("product");
-    const { product_name } = req.query;
+    const { product_image } = req.query;
 
     if (req.method === "GET") {
       const products = await categoryCollection.findOne({
         "products": {
-          $elemMatch: { "product_name": product_name }
+          $elemMatch: { "product_image": product_image }
         }
       });
 

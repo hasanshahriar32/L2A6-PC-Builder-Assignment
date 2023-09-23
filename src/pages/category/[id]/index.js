@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
   const paths = newses?.data?.map((news) => ({
     params: { id: news.category_id.toString() },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 };
 export const getStaticProps = async (context) => {
   const { params } = context;

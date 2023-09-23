@@ -64,7 +64,7 @@ const FeaturedCategory = ({ featured }) => {
                 />
               }
               title={
-                <Link href={`/product/${item?.product_name}`}>{item?.product_name}</Link>
+                <Link href={`/product/${item?.product_image}`}>{item?.product_name}</Link>
               }
               description={<div>
                 <h5>{`Price: ${item?.product_price}$`}</h5>

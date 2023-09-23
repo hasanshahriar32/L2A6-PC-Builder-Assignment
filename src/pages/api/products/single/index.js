@@ -28,7 +28,7 @@ async function dbConnection(req, res) {
       } else {
         // Return only the matching product, not the entire array
         const matchingProduct = products.products.find(
-          (product) => product.product_name === product_name
+          (product) => product.product_image === product_image
         );
         res.send({ message: "success", status: 200, data: matchingProduct });
       }

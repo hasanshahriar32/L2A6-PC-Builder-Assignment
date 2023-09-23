@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
+  ShoppingCartOutlined,
+  AppstoreAddOutlined,
+  CreditCardOutlined,
 } from "@ant-design/icons";
 import { Avatar, Card } from "antd";
 import { Image } from 'antd';
@@ -28,7 +28,7 @@ const FeaturedCategory = ({ featured }) => {
   return (
     <div>
       <h1 style={{textAlign:"center"}}>Featured Prodects</h1>
-      <h4 style={{textAlign:"center", margin:"0 3px"}}>Some of our personalized products you might like exploring!</h4>
+      <p style={{textAlign:"center", margin:"0 3px", marginTop:"-6px"}}>Some of our personalized products you might like exploring!</p>
       <div style={cardsStyle}>
         {featured?.map((item) => (
           <Card
@@ -52,9 +52,9 @@ const FeaturedCategory = ({ featured }) => {
               />
             }
             actions={[
-              <SettingOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />,
+              <CreditCardOutlined title="order now" key="setting" />,
+              <ShoppingCartOutlined title="add to cart" key="edit" />,
+              <AppstoreAddOutlined disabled title="build pc" key="ellipsis" />,
             ]}
           >
             <Meta

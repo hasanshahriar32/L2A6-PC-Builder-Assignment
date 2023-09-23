@@ -17,16 +17,20 @@ async function dbConnection(req, res) {
     const { product_name } = req.query;
 
     if (req.method === "GET") {
-      const products = await categoryCollection.find({
+      const products = await categoryCollection.findOne({
         "products": {
           $elemMatch: { "product_name": product_name }
         }
-      }).toArray();
+      });
 
-      if (products.length === 0) {
+      if (!products) {
         res.status(404).json({ message: "Product not found", status: 404 });
       } else {
-        res.send({ message: "success", status: 200, data: products });
+        // Return only the matching product, not the entire array
+        const matchingProduct = products.products.find(
+          (product) => product.product_name === product_name
+        );
+        res.send({ message: "success", status: 200, data: matchingProduct });
       }
     }
   } catch (error) {
@@ -36,5 +40,6 @@ async function dbConnection(req, res) {
     await client.close();
   }
 }
+
 
 export default dbConnection;

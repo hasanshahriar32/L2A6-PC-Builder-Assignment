@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.SERVER_URL}/api/products/all`);
   const newses = await res.json();
   const paths = newses?.data?.map((news) => ({
-    params: { id: news?.product_name },
+    params: { id: news.product_name.toString() },
   }));
   return { paths, fallback: true };
 };

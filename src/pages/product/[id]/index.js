@@ -32,7 +32,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `${process.env.SERVER_URL}/api/products/${params.id}`
+    `${process.env.SERVER_URL}/api/products/single?product_name=${params.id}`
   );
   const data = await res.json();
 

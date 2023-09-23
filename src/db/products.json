@@ -6,6 +6,7 @@
     "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp",
     "products": [
       {
+        "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp",
         "product_name": "Intel Core i9-10900K",
         "product_description": "Intel Core i9-10900K",
         "product_image": "https://i.ibb.co/kK3bNMj/core-i9-10900k-1-100842115-large.jpg",
@@ -33,6 +34,7 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp",
         "product_name": "AMD Ryzen 9 5900X",
         "product_description": "AMD Ryzen 9 5900X",
         "product_image": "https://i.ibb.co/mFPNhCD/AMD-Ryzen-9-5900-X-review-1212x681.jpg",
@@ -60,6 +62,7 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/vdd58L8/paradoxcpu.webp",
         "product_name": "AMD Ryzen 7 5800X",
         "product_description": "AMD Ryzen 7 5800X",
         "product_image": "https://i.ibb.co/5R0hd6x/0x0.jpg",
@@ -95,9 +98,10 @@
     "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp",
     "products": [
       {
+        "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp",
         "product_name": "NVIDIA GeForce RTX 3080",
         "product_description": "NVIDIA GeForce RTX 3080",
-        "product_image": "https://i.ibb.co/xyz123/rtx-3080.jpg",
+        "product_image": "https://i.ibb.co/gFQmpVJ/Nvidia-RTX-3080-5.jpg",
         "product_price": 799.99,
         "product_stock": 8,
         "product_category": "gpu",
@@ -122,9 +126,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp",
         "product_name": "AMD Radeon RX 6900 XT",
         "product_description": "AMD Radeon RX 6900 XT",
-        "product_image": "https://i.ibb.co/abc456/rx-6900-xt.jpg",
+        "product_image": "https://i.ibb.co/4MBNq7V/2020-09-28-16-24-50-Ge-Force-RTX-3080-GAMING-OC-10-G-Graphics-Card-GIGABYTE-Global.png",
         "product_price": 749.99,
         "product_stock": 10,
         "product_category": "gpu",
@@ -149,9 +154,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/Gdjm4y6/paradoxgpu.webp",
         "product_name": "ASUS ROG Strix GeForce RTX 3070",
         "product_description": "ASUS ROG Strix GeForce RTX 3070",
-        "product_image": "https://i.ibb.co/def789/rog-strix-rtx-3070.jpg",
+        "product_image": "https://i.ibb.co/8NV6d22/ImgW.jpg",
         "product_price": 599.99,
         "product_stock": 12,
         "product_category": "gpu",
@@ -184,9 +190,10 @@
     "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp",
     "products": [
       {
+        "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp",
         "product_name": "Corsair Vengeance LPX 16GB DDR4",
         "product_description": "Corsair Vengeance LPX 16GB DDR4 RAM",
-        "product_image": "https://i.ibb.co/xyz123/corsair-vengeance-ram.jpg",
+        "product_image": "https://i.ibb.co/yBCQPFD/71-EXOw-FSf-L-AC-SL1500.jpg",
         "product_price": 89.99,
         "product_stock": 20,
         "product_category": "ram",
@@ -211,9 +218,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp",
         "product_name": "G.Skill Trident Z RGB 32GB DDR4",
         "product_description": "G.Skill Trident Z RGB 32GB DDR4 RAM",
-        "product_image": "https://i.ibb.co/abc456/gskill-trident-ram.jpg",
+        "product_image": "https://i.ibb.co/KrqS9q7/20-232-482-V02.jpg",
         "product_price": 129.99,
         "product_stock": 15,
         "product_category": "ram",
@@ -238,9 +246,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/y8w80R5/paradoxram.webp",
         "product_name": "Kingston HyperX Fury 8GB DDR4",
         "product_description": "Kingston HyperX Fury 8GB DDR4 RAM",
-        "product_image": "https://i.ibb.co/def789/kingston-hyperx-ram.jpg",
+        "product_image": "https://i.ibb.co/fdyZ5dy/kingston-hx421c14fb2-8-hyperx-series-8gb-ddr4-1254842.jpg",
         "product_price": 49.99,
         "product_stock": 25,
         "product_category": "ram",
@@ -273,9 +282,10 @@
     "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg",
     "products": [
       {
+        "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg",
         "product_name": "ASUS ROG Strix Z590-E",
         "product_description": "ASUS ROG Strix Z590-E Motherboard",
-        "product_image": "https://i.ibb.co/xyz123/asus-rog-strix-mobo.jpg",
+        "product_image": "https://i.ibb.co/sjvKy2c/ROG-STRIX-X299-E-GAMING-II-08.jpg",
         "product_price": 299.99,
         "product_stock": 12,
         "product_category": "motherboard",
@@ -300,9 +310,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg",
         "product_name": "MSI B450 TOMAHAWK MAX",
         "product_description": "MSI B450 TOMAHAWK MAX Motherboard",
-        "product_image": "https://i.ibb.co/abc456/msi-b450-mobo.jpg",
+        "product_image": "https://i.ibb.co/5nD3MHM/LD0004963741-2.jpg",
         "product_price": 129.99,
         "product_stock": 18,
         "product_category": "motherboard",
@@ -327,9 +338,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/zVvj2bN/paradoxmother.jpg",
         "product_name": "Gigabyte Aorus X570 Master",
         "product_description": "Gigabyte Aorus X570 Master Motherboard",
-        "product_image": "https://i.ibb.co/def789/gigabyte-x570-mobo.jpg",
+        "product_image": "https://i.ibb.co/kKD3Khq/2777413-d39c6987fa05.png",
         "product_price": 349.99,
         "product_stock": 10,
         "product_category": "motherboard",
@@ -362,9 +374,10 @@
     "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp",
     "products": [
       {
+        "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp",
         "product_name": "Samsung 970 EVO 1TB NVMe SSD",
         "product_description": "Samsung 970 EVO 1TB NVMe SSD",
-        "product_image": "https://i.ibb.co/xyz123/samsung-970-evo-ssd.jpg",
+        "product_image": "https://i.ibb.co/c19MYRd/samsung-1tb-1000gb-970-evo-m2-pcie-high-performance-nvme-ssd-solid-state-drive.jpg",
         "product_price": 149.99,
         "product_stock": 15,
         "product_category": "storage",
@@ -389,9 +402,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp",
         "product_name": "Western Digital WD Blue 2TB HDD",
         "product_description": "Western Digital WD Blue 2TB HDD",
-        "product_image": "https://i.ibb.co/abc456/wd-blue-hdd.jpg",
+        "product_image": "https://i.ibb.co/9sX6wmd/WD-Blue-Mobile-2-TB.jpg",
         "product_price": 79.99,
         "product_stock": 20,
         "product_category": "storage",
@@ -416,9 +430,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/WgnBWK3/paradoxhdd.webp",
         "product_name": "Crucial MX500 500GB SATA SSD",
         "product_description": "Crucial MX500 500GB SATA SSD",
-        "product_image": "https://i.ibb.co/def789/crucial-mx500-ssd.jpg",
+        "product_image": "https://i.ibb.co/xYJCHNx/Crucial-MX500-M-2-500-GB.jpg",
         "product_price": 69.99,
         "product_stock": 25,
         "product_category": "storage",
@@ -451,9 +466,10 @@
     "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp",
     "products": [
       {
+        "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp",
         "product_name": "EVGA SuperNOVA 750W 80+ Gold PSU",
         "product_description": "EVGA SuperNOVA 750W 80+ Gold PSU",
-        "product_image": "https://i.ibb.co/xyz123/evga-supernova-psu.jpg",
+        "product_image": "https://i.ibb.co/f9t0yM1/image-9.png",
         "product_price": 119.99,
         "product_stock": 15,
         "product_category": "power-supply",
@@ -478,9 +494,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp",
         "product_name": "Corsair RM850x 850W 80+ Gold PSU",
         "product_description": "Corsair RM850x 850W 80+ Gold PSU",
-        "product_image": "https://i.ibb.co/abc456/corsair-rm850x-psu.jpg",
+        "product_image": "https://i.ibb.co/Y8wrGpv/corsair-cp-9020093-na-rm850x-850w-80-plus-1237367.jpg",
         "product_price": 139.99,
         "product_stock": 12,
         "product_category": "power-supply",
@@ -505,9 +522,10 @@
         ]
       },
       {
+        "category_image": "https://i.ibb.co/NYD0RPQ/paradoxpower.webp",
         "product_name": "Seasonic Focus GX-650 650W 80+ Gold PSU",
         "product_description": "Seasonic Focus GX-650 650W 80+ Gold PSU",
-        "product_image": "https://i.ibb.co/def789/seasonic-focus-psu.jpg",
+        "product_image": "https://i.ibb.co/hc8Rdzt/591.jpg",
         "product_price": 109.99,
         "product_stock": 18,
         "product_category": "power-supply",

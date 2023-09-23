@@ -15,7 +15,7 @@ const FeaturedCategory = ({ allCategory }) => {
     <div className="m-home m-cat">
       <div className="cat-items-wrap">
         <Card title="Featured Category">
-          {allCategory.map((item) => (
+          {allCategory?.map((item) => (
             <Card.Grid style={gridStyle} key={item._id}>
               <Link
                 href={`/category/${item?.category_id}`}
@@ -23,6 +23,7 @@ const FeaturedCategory = ({ allCategory }) => {
               >
                 <span className="cat-icon">
                   <Image
+                    objectFit="cover"
                     src={item?.category_image}
                     alt={item?.category_name}
                     width={48}

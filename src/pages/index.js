@@ -4,12 +4,14 @@ import MainLayout from "@/components/layout";
 import { Layout } from "antd";
 import FeaturedCategory from "@/components/Featured/FeaturedCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
+import HeroBanner from "@/components/Hero/Hero";
 
 export default function Page({ allCategory, featured }) {
   // console.log(allCategory, featured);
   return (
     <>
       <div>this is home</div>
+      <HeroBanner />
       <FeaturedProducts featured={featured} />
       <FeaturedCategory allCategory={allCategory} />
       

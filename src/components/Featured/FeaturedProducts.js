@@ -5,7 +5,7 @@ import {
   CreditCardOutlined,
 } from "@ant-design/icons";
 import { Avatar, Card } from "antd";
-import { Image } from 'antd';
+import { Image } from "antd";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -27,8 +27,10 @@ const FeaturedCategory = ({ featured }) => {
   const router = useRouter();
   return (
     <div>
-      <h1 style={{textAlign:"center"}}>Featured Prodects</h1>
-      <p style={{textAlign:"center", margin:"0 3px", marginTop:"-6px"}}>Some of our personalized products you might like exploring!</p>
+      <h1 style={{ textAlign: "center" }}>Featured Prodects</h1>
+      <p style={{ textAlign: "center", margin: "0 3px", marginTop: "-6px" }}>
+        Some of our personalized products you might like exploring!
+      </p>
       <div style={cardsStyle}>
         {featured?.map((item) => (
           <Card
@@ -64,8 +66,13 @@ const FeaturedCategory = ({ featured }) => {
                   src={item?.category_image}
                 />
               }
-              title={<Link href={`/product/${item?._id}`}>{item?.product_name}</Link>}
-              description={`Price: ${item?.product_price}$`}
+              title={
+                <Link href={`/product/${item?._id}`}>{item?.product_name}</Link>
+              }
+              description={<div>
+                <h5>{`Price: ${item?.product_price}$`}</h5>
+                <p style={{marginTop: "-20px"}}>{`Status: ${item?.product_status}`}    {`⭐${item?.rating}`}</p>
+              </div>}
             />
           </Card>
         ))}

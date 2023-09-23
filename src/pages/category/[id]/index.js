@@ -7,7 +7,7 @@ import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 import HeroBanner from "@/components/Hero/Hero";
 
 export default function Page({ featured }) {
-  console.log(featured);
+//   console.log(featured);
   return (
     <>
         <br />

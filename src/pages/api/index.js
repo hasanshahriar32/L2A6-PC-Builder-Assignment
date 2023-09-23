@@ -25,7 +25,7 @@ async function dbConnection(req, res) {
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
-    res.send({ data: "hi" });
+    res.send({ data: "welcome to paradox tech" });
   } finally {
   }
 }

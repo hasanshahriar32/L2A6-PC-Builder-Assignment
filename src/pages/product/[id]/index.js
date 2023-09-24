@@ -33,7 +33,9 @@ export const getStaticProps = async (context) => {
   try {
     const { params } = context;
     const res = await fetch(
-      `${process.env.SERVER_URL}/api/products/single?product_id=${params.id}`
+      `${process.env.SERVER_URL}/api/products/single?product_id=${parseInt(
+        params.id
+      )}`
     );
     const data = await res.json();
 

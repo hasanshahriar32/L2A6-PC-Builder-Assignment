@@ -25,7 +25,7 @@ export default function ProductDetailPage({
 }) {
   const route = useRouter();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
-  const [reviews, setReviews] = useState(product.reviews || []);
+  // const [reviews, setReviews] = useState(product.reviews || []);
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || {};
     const totalQuantity = Object.values(cartItems).reduce(
@@ -75,19 +75,19 @@ export default function ProductDetailPage({
     // Implement your checkout functionality here
   };
 
-  const handleReviewSubmit = (values) => {
-    const newReview = {
-      reviewer_name: values.name,
-      reviewer_email: values.email,
-      reviewer_rating: values.rating,
-      reviewer_comment: values.comment,
-    };
+  // const handleReviewSubmit = (values) => {
+  //   const newReview = {
+  //     reviewer_name: values.name,
+  //     reviewer_email: values.email,
+  //     reviewer_rating: values.rating,
+  //     reviewer_comment: values.comment,
+  //   };
 
-    // You can send the new review to your backend here and update the state
-    // For simplicity, we're just updating the state locally
-    setReviews([...reviews, newReview]);
-    setReviewFormVisible(false);
-  };
+  //   // You can send the new review to your backend here and update the state
+  //   // For simplicity, we're just updating the state locally
+  //   setReviews([...reviews, newReview]);
+  //   setReviewFormVisible(false);
+  // };
 
   return (
     <>
@@ -148,7 +148,6 @@ export default function ProductDetailPage({
               <Button
                 type="primary"
                 block
-                onClick={handleAddToCart}
                 icon={<i className="fas fa-cart-plus"></i>}
               >
                 Build Personal Computer
@@ -159,10 +158,10 @@ export default function ProductDetailPage({
 
         <div style={{ marginTop: "20px" }}>
           <Title level={3}>Product Reviews</Title>
-          <Button type="primary" onClick={() => setReviewFormVisible(true)}>
+          {/* <Button type="primary" onClick={() => setReviewFormVisible(true)}>
             Write a Review
-          </Button>
-          {reviewFormVisible && (
+          </Button> */}
+          {/* {reviewFormVisible && (
             <Form
               onFinish={handleReviewSubmit}
               style={{ marginTop: "16px" }}
@@ -207,8 +206,8 @@ export default function ProductDetailPage({
                 </Button>
               </Form.Item>
             </Form>
-          )}
-          <List
+          )} */}
+          {/* <List
             itemLayout="horizontal"
             dataSource={reviews}
             renderItem={(review) => (
@@ -224,7 +223,7 @@ export default function ProductDetailPage({
                 />
               </List.Item>
             )}
-          />
+          /> */}
         </div>
       </div>
     </>

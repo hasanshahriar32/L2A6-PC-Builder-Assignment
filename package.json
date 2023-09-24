@@ -23,7 +23,7 @@
     "react-dom": "18.2.0",
     "swr": "^2.2.2"
   },
-  "engine": {
-    "node": "^18.0.0"
+  "engines": {
+    "nodejs": "^18.0.0"
   }
 }

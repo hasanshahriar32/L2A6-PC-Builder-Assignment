@@ -31,6 +31,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { Layout } from "antd";
 import FooterBar from "./Footer/Footer";
 import useSWR from "swr";
+import { useState } from "react";
 
 export default function MainLayout({ children }) {
   // Ensure this code only runs on the client-side to avoid server-side issues
@@ -39,6 +40,7 @@ export default function MainLayout({ children }) {
   // console.log(data);
 
   // ...
+  const [cartCount, setCartCount] = useState(0);
 
   return (
     <Layout
@@ -49,8 +51,18 @@ export default function MainLayout({ children }) {
       }}
     >
       <div>
-        <Navbar allCategory={data} isLoading={isLoading} />
-        <main className="" style={{ width: "100%", marginTop: "50px" }}>
+        <Navbar
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+          allCategory={data}
+          isLoading={isLoading}
+        />
+        <main
+          className=""
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+          style={{ width: "100%", marginTop: "50px" }}
+        >
           {children}
         </main>
       </div>

@@ -13,18 +13,61 @@ import {
   List,
 } from "antd";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 const { Meta } = Card;
 const { Title } = Typography;
 
-export default function ProductDetailPage({ product }) {
+export default function ProductDetailPage({
+  product,
+  setCartCount,
+  cartCount,
+}) {
   const route = useRouter();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
   const [reviews, setReviews] = useState(product.reviews || []);
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || {};
+    const totalQuantity = Object.values(cartItems).reduce(
+      (total, quantity) => total + quantity,
+      0
+    );
+    // setCartCount(totalQuantity);
+  }, [setCartCount, cartCount]);
+  const [cartItems, setCartItems] = useState({});
 
-  const handleAddToCart = () => {
-    // Implement your add to cart functionality here
+  // Load cart items from local storage on component mount
+  useEffect(() => {
+    const cartFromStorage = JSON.parse(localStorage.getItem("cart")) || {};
+    setCartItems(cartFromStorage);
+  }, []);
+
+  const handleAddToCart = (item) => {
+    const { product_id: itemId, product_name: itemName } = item;
+
+    // Retrieve existing cart items from local storage
+    const existingCartItems = JSON.parse(localStorage.getItem("cart")) || {};
+
+    // Clone the existing cart items
+    const newCartItems = { ...existingCartItems };
+
+    // Check if the item is already in the cart
+    if (newCartItems[itemId]) {
+      // If the item is already in the cart, show an alert
+      alert(`${itemName} is already in the cart.`);
+    } else {
+      // If the item is not in the cart, add it with a quantity of 1
+      newCartItems[itemId] = 1;
+
+      // Update local storage with the new cart items
+      localStorage.setItem("cart", JSON.stringify(newCartItems));
+
+      // Show a success message
+      alert(`Added ${itemName} to the cart.`);
+    }
+
+    // Update the state with the new cart items
+    setCartItems(newCartItems);
   };
 
   const handleCheckout = (id) => {
@@ -72,7 +115,7 @@ export default function ProductDetailPage({ product }) {
               <Button
                 type="primary"
                 block
-                onClick={handleAddToCart}
+                onClick={() => handleAddToCart(product)}
                 icon={<i className="fas fa-cart-plus"></i>}
               >
                 Add to Cart

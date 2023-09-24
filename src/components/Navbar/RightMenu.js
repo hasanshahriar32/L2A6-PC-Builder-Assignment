@@ -10,23 +10,24 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 import {useState, useEffect} from "react";
-const RightMenu = ({ mode }) => {
+const RightMenu = ({ mode, setCartCount, cartCount }) => {
   const { data: session } = useSession();
   // console.log(session);
-  const [cartCount, setCartCount] = useState(0)
   useEffect(() => {
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || {};
-  const totalQuantity = Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
-  setCartCount(totalQuantity);
-}, []);
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || {};
+    const totalQuantity = Object.values(cartItems).reduce(
+      (total, quantity) => total + quantity,
+      0
+    );
+    setCartCount(totalQuantity);
+  }, [setCartCount, cartCount]);
 
   return (
     <Menu mode={mode}>
-       <Menu.Item
-          key="cart"
-        >
-         Cart  <ShoppingCartOutlined /><sup>{cartCount || 0}</sup>
-        </Menu.Item>
+      <Menu.Item key="cart">
+        Cart <ShoppingCartOutlined />
+        <sup>{cartCount || 0}</sup>
+      </Menu.Item>
       {!session ? (
         <Menu.Item
           onClick={() =>

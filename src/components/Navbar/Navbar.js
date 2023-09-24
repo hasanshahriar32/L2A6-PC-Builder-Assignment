@@ -7,7 +7,7 @@ import styles from "@/styles/Navbar.module.css";
 import { SessionProvider } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-const Navbar = ({ allCategory, isLoading }) => {
+const Navbar = ({ allCategory, isLoading, setCartCount, cartCount }) => {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(!visible);
@@ -70,7 +70,11 @@ const Navbar = ({ allCategory, isLoading }) => {
               </Button>
               <SessionProvider>
                 <div className={`${styles.rightMenu}`}>
-                  <RightMenu mode={"horizontal"} />
+                  <RightMenu
+                    setCartCount={setCartCount}
+                    cartCount={cartCount}
+                    mode={"horizontal"}
+                  />
                 </div>
               </SessionProvider>
 
@@ -88,7 +92,11 @@ const Navbar = ({ allCategory, isLoading }) => {
                   mode={"inline"}
                 />
                 <SessionProvider>
-                  <RightMenu mode={"inline"} />
+                  <RightMenu
+                    setCartCount={setCartCount}
+                    cartCount={cartCount}
+                    mode={"inline"}
+                  />
                 </SessionProvider>
               </Drawer>
             </div>

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import MainLayout from "@/components/layout";
+import Link from "next/link";
 import {
   Layout,
   Card,
@@ -14,7 +15,6 @@ import {
 } from "antd";
 import { Image } from "antd";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 const { Meta } = Card;
 const { Title } = Typography;
 
@@ -23,7 +23,6 @@ export default function ProductDetailPage({
   setCartCount,
   cartCount,
 }) {
-  const route = useRouter();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
   const [reviews, setReviews] = useState(product?.reviews || []);
   useEffect(() => {
@@ -68,11 +67,6 @@ export default function ProductDetailPage({
 
     // Update the state with the new cart items
     setCartItems(newCartItems);
-  };
-
-  const handleCheckout = (id) => {
-    route.push(`/checkout/${id}`);
-    // Implement your checkout functionality here
   };
 
   const handleReviewSubmit = (values) => {
@@ -130,14 +124,15 @@ export default function ProductDetailPage({
               </Button>
             </Col>
             <Col span={12}>
+              <Link href={`/checkout/${product?.product_id}`}>
               <Button
                 type="primary"
                 block
-                onClick={() => handleCheckout(product?.product_id)}
                 icon={<i className="fas fa-shopping-cart"></i>}
               >
                 Checkout
               </Button>
+              </Link>
             </Col>
           </Row>
           <br />

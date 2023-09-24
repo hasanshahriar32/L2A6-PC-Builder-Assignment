@@ -6,7 +6,7 @@ const LeftMenu = ({ mode, allCategory, isLoading }) => {
   const router = useRouter();
   return (
     <Menu mode={mode}>
-      <Menu.Item key="buildPc"> PC Builder</Menu.Item>
+      <Menu.Item onClick={() => router.push(`/build`)} key="buildPc"> PC Builder</Menu.Item>
       {/* write a submenu component  */}
       <Menu.SubMenu  key="category" title="Categories">
         {isLoading ? (
@@ -28,8 +28,8 @@ const LeftMenu = ({ mode, allCategory, isLoading }) => {
         )}
       </Menu.SubMenu>
 
-      <Menu.Item key="about">About Us</Menu.Item>
-      <Menu.Item key="contact">Contact Us</Menu.Item>
+      <Menu.Item onClick={() => router.push(`/product`)} key="allProduct">All Products</Menu.Item>
+      <Menu.Item onClick={() => router.push(`https://shahriarhasan.vercel.app`)} key="about">About Dev.</Menu.Item>
     </Menu>
   );
 };

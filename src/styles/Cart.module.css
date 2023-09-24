@@ -1,0 +1,8 @@
+/* styles.css */
+.add-to-cart-icon {
+  color: #000; /* Default color */
+}
+
+.added-to-cart-icon {
+  color: #ff0000; /* Change to your desired color for added items */
+}

@@ -22,7 +22,7 @@ export default function Page({ featured }) {
 }
 
 export const getStaticProps = async () => {
-  const res2 = await fetch(`${process.env.SERVER_URL}/api/products/featured`);
+  const res2 = await fetch(`${process.env.SERVER_URL}/api/products/all`);
   const data2 = await res2.json();
   return {
     props: {

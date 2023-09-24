@@ -14,7 +14,7 @@ import {
 } from "antd";
 import { Image } from "antd";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 const { Meta } = Card;
 const { Title } = Typography;
 
@@ -23,7 +23,7 @@ export default function ProductDetailPage({
   setCartCount,
   cartCount,
 }) {
-  const route = useRouter();
+  // const route = useRouter();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
   // const [reviews, setReviews] = useState(product.reviews || []);
   useEffect(() => {
@@ -71,7 +71,7 @@ export default function ProductDetailPage({
   };
 
   const handleCheckout = (id) => {
-    route.push(`/checkout/${id}`);
+    // route.push(`/checkout/${id}`);
     // Implement your checkout functionality here
   };
 

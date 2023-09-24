@@ -7,10 +7,10 @@ import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 import HeroBanner from "@/components/Hero/Hero";
 
 export default function Page({ featured }) {
-  console.log(featured);
+  //   console.log(featured);
   return (
     <>
-        <br />
+      <br />
       <h1 style={{ textAlign: "center", marginTop: "20px" }}>
         Category of {featured?.product_name}
       </h1>
@@ -24,6 +24,7 @@ export default function Page({ featured }) {
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.SERVER_URL}/api/products/all`);
   const newses = await res.json();
+  console.log(newses);
   const paths = newses?.data?.map((news) => ({
     params: { id: news.product_id.toString() },
   }));
@@ -37,7 +38,13 @@ export const getStaticProps = async (context) => {
         params.id
       )}`
     );
+    // const res = await fetch(
+    //   `${process.env.SERVER_URL}/api/products/single?product_id=${parseInt(
+    //     params.id
+    //   )}`
+    // );
     const data = await res.json();
+    console.log(data);
 
     if (!data || !data.data || data.data.length === 0) {
       // If data is not available or empty, return an empty object
@@ -48,7 +55,7 @@ export const getStaticProps = async (context) => {
 
     // Ensure that the 'featured' prop is always an object, even if the data is available
     return {
-      props: { featured: data.data[0] || {} },
+      props: { featured: data.data || {} },
     };
   } catch (error) {
     console.error("Error:", error);

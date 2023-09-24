@@ -25,7 +25,7 @@ export default function ProductDetailPage({
 }) {
   const route = useRouter();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
-  const [reviews, setReviews] = useState(product.reviews || []);
+  const [reviews, setReviews] = useState(product?.reviews || []);
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || {};
     const totalQuantity = Object.values(cartItems).reduce(

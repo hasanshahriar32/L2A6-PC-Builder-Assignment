@@ -64,7 +64,7 @@ export const getStaticProps = async (context) => {
   const data = await res.json();
 
   return {
-    props: { featured: data?.data[0] },
+    props: { featured: data?.data },
   };
 };
 

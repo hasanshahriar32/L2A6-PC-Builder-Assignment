@@ -14,12 +14,12 @@ async function dbConnection(req, res) {
     await client.connect();
     console.log("MongoDB connected successfully");
     const categoryCollection = client.db("paradox").collection("product");
-    const { product_image } = req.query;
+    const { product_id } = req.query;
 
     if (req.method === "GET") {
       const products = await categoryCollection.findOne({
         "products": {
-          $elemMatch: { "product_image": product_image }
+          $elemMatch: { "product_id": product_id }
         }
       });
 
@@ -28,7 +28,7 @@ async function dbConnection(req, res) {
       } else {
         // Return only the matching product, not the entire array
         const matchingProduct = products.products.find(
-          (product) => product.product_image === product_image
+          (product) => product.product_id === product_id
         );
         res.send({ message: "success", status: 200, data: matchingProduct });
       }

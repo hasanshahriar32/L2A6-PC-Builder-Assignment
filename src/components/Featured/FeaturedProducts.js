@@ -127,12 +127,12 @@ const FeaturedCategory = ({ featured }) => {
               />
             }
             actions={[
-              <CreditCardOutlined
-                onClick={() => router.push(`/checkout/${item?.product_id}`)}
+              <span onClick={() => router.push(`/checkout/${item?.product_id}`)}
                 title="order now"
-                key="setting"
-              />,
-              <ShoppingCartOutlined
+                key="setting">
+                <CreditCardOutlined  /> BUY
+              </span>,
+              <span 
                 onClick={() => handleCart(item)}
                 title="add to cart"
                 key="edit"
@@ -141,12 +141,16 @@ const FeaturedCategory = ({ featured }) => {
                     ? styles["added-to-cart-icon"]
                     : styles["add-to-cart-icon"]
                 }
-              />,
-              <AppstoreAddOutlined
+             >
+                <ShoppingCartOutlined /> CART
+              </span>,
+              <span 
                 onClick={() => handleBuild(item)}
                 title="build pc"
                 key="ellipsis"
-              />,
+             >
+                <AppstoreAddOutlined /> BUILD
+              </span>,
             ]}
           >
             <Meta

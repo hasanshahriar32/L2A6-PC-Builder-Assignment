@@ -1,15 +1,78 @@
 import MainLayout from "@/components/layout";
 import { Layout } from "antd";
 import Head from "next/head";
+import { Avatar, Button, Card, Col, Row } from "antd";
+import { useSession, signOut } from "next-auth/react";
 
-const UserProfile = () => {
-  return <div>this is protected user profile</div>;
+const Profile = () => {
+  const { data: session } = useSession();
+
+  const handleLogout = () => {
+    signOut(); // This function is provided by NextAuth.js to log the user out
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <Card
+        style={{
+          width: "80%",
+          maxWidth: 400,
+          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+        }}
+      >
+        <Row gutter={16} justify="center">
+          <Col span={24}>
+            <Avatar
+              size={120}
+              src={session?.user?.image || "/default-avatar.png"}
+            />
+          </Col>
+        </Row>
+        <Row gutter={16} justify="center">
+          <Col span={24}>
+            <h2 style={{ textAlign: "center" }}>
+              {session?.user?.name || "Guest"}
+            </h2>
+          </Col>
+        </Row>
+        <Row gutter={16} justify="center">
+          <Col span={24}>
+            <p style={{ textAlign: "center" }}>
+              {session?.user?.email || "guest@example.com"}
+            </p>
+          </Col>
+        </Row>
+        <Row gutter={16} justify="center">
+          <Col span={24}>
+            <Button
+              type="primary"
+              block
+              onClick={handleLogout}
+              style={{
+                marginTop: 16,
+                backgroundColor: "#ff4d4f",
+                borderColor: "#ff4d4f",
+              }}
+            >
+              Logout
+            </Button>
+          </Col>
+        </Row>
+      </Card>
+    </div>
+  );
 };
 
-export default UserProfile;
+export default Profile;
 
-
-UserProfile.getLayout = function getLayout(page) {
+Profile.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Head>

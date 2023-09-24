@@ -7,7 +7,7 @@ export function useBuildContext() {
 }
 
 export function BuildProvider({ children }) {
-  const [state, setState] = useState({
+  const [data, setData] = useState({
     // Define your initial state here
     // Example: user: null,
   });
@@ -15,7 +15,7 @@ export function BuildProvider({ children }) {
   // Define functions to update the state
 
   return (
-    <BuildContext.Provider value={{ state, setState }}>
+    <BuildContext.Provider value={{ data, setData }}>
       {children}
     </BuildContext.Provider>
   );

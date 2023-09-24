@@ -28,12 +28,18 @@ const cardItemStyle = {
 const FeaturedCategory = ({ featured }) => {
   const router = useRouter();
   const [cartItems, setCartItems] = useState({});
+  const [buildItems, setBuildItems] = useState({});
   const [api, contextHolder] = notification.useNotification();
+  console.log(featured);
 
   // Load cart items from local storage on component mount
   useEffect(() => {
     const cartFromStorage = JSON.parse(localStorage.getItem("cart")) || {};
     setCartItems(cartFromStorage);
+  }, []);
+  useEffect(() => {
+    const cartFromStorage = JSON.parse(localStorage.getItem("build")) || {};
+    setBuildItems(cartFromStorage);
   }, []);
 
   const handleCart = (item) => {
@@ -70,6 +76,30 @@ const FeaturedCategory = ({ featured }) => {
 
     // Update the state with the new cart items
     setCartItems(newCartItems);
+  };
+
+  const handleBuild = (item) => {
+    const { product_category: itemId, product_id: itemName } = item;
+
+    // Retrieve existing cart items from local storage
+    const existingCartItems = JSON.parse(localStorage.getItem("build")) || {};
+
+    // Clone the existing cart items
+    const newCartItems = { ...existingCartItems };
+    // If the item is not in the cart, add it with a quantity of 1
+    newCartItems[itemId] = JSON.stringify(item);
+
+    // Update local storage with the new cart items
+    localStorage.setItem("build", JSON.stringify(newCartItems));
+
+    // Show a success message
+    api["success"]({
+      message: "Success!",
+      description: `Added ${itemId} (id:${itemName}) for build.`,
+      duration: 3,
+    });
+    router.push(`/build`);
+    setBuildItems(newCartItems);
   };
 
   return (
@@ -112,7 +142,11 @@ const FeaturedCategory = ({ featured }) => {
                     : styles["add-to-cart-icon"]
                 }
               />,
-              <AppstoreAddOutlined disabled title="build pc" key="ellipsis" />,
+              <AppstoreAddOutlined
+                onClick={() => handleBuild(item)}
+                title="build pc"
+                key="ellipsis"
+              />,
             ]}
           >
             <Meta

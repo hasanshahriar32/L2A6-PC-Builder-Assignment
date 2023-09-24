@@ -4,6 +4,7 @@ import {
   CreditCardOutlined,
 } from "@ant-design/icons";
 import { Avatar, Card } from "antd";
+import { Button, notification } from "antd";
 import { Image } from "antd";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -27,6 +28,7 @@ const cardItemStyle = {
 const FeaturedCategory = ({ featured }) => {
   const router = useRouter();
   const [cartItems, setCartItems] = useState({});
+  const [api, contextHolder] = notification.useNotification();
 
   // Load cart items from local storage on component mount
   useEffect(() => {
@@ -46,7 +48,11 @@ const FeaturedCategory = ({ featured }) => {
     // Check if the item is already in the cart
     if (newCartItems[itemId]) {
       // If the item is already in the cart, show an alert
-      alert(`${itemName} is already in the cart.`);
+      api["warning"]({
+        message: "ALert!",
+        description: `${itemName} is already in the cart.`,
+        duration: 3,
+      });
     } else {
       // If the item is not in the cart, add it with a quantity of 1
       newCartItems[itemId] = 1;
@@ -55,7 +61,11 @@ const FeaturedCategory = ({ featured }) => {
       localStorage.setItem("cart", JSON.stringify(newCartItems));
 
       // Show a success message
-      alert(`Added ${itemName} to the cart.`);
+      api["success"]({
+        message: "Success!",
+        description: `Added ${itemName} to the cart.`,
+        duration: 3,
+      });
     }
 
     // Update the state with the new cart items
@@ -64,6 +74,7 @@ const FeaturedCategory = ({ featured }) => {
 
   return (
     <div>
+      {contextHolder}
       <div style={cardsStyle}>
         {featured?.map((item) => (
           <Card
@@ -119,9 +130,9 @@ const FeaturedCategory = ({ featured }) => {
               description={
                 <div>
                   <h5>{`Price: ${item?.product_price}$`}</h5>
-                  <p style={{ marginTop: "-20px" }}>{`Status: ${
-                    item?.product_status
-                  }    ⭐${item?.rating}`}</p>
+                  <p
+                    style={{ marginTop: "-20px" }}
+                  >{`Status: ${item?.product_status}    ⭐${item?.rating}`}</p>
                 </div>
               }
             />

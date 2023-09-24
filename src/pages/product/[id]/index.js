@@ -12,6 +12,7 @@ import {
   Input,
   Rate,
   List,
+  notification,
 } from "antd";
 import { Image } from "antd";
 import { useState, useEffect } from "react";
@@ -23,6 +24,7 @@ export default function ProductDetailPage({
   setCartCount,
   cartCount,
 }) {
+  const [api, contextHolder] = notification.useNotification();
   const [reviewFormVisible, setReviewFormVisible] = useState(false);
   const [reviews, setReviews] = useState(product?.reviews || []);
   useEffect(() => {
@@ -53,7 +55,11 @@ export default function ProductDetailPage({
     // Check if the item is already in the cart
     if (newCartItems[itemId]) {
       // If the item is already in the cart, show an alert
-      alert(`${itemName} is already in the cart.`);
+      api["warning"]({
+        message: "ALert!",
+        description: `${itemName} is already in the cart.`,
+        duration: 3,
+      });
     } else {
       // If the item is not in the cart, add it with a quantity of 1
       newCartItems[itemId] = 1;
@@ -62,7 +68,11 @@ export default function ProductDetailPage({
       localStorage.setItem("cart", JSON.stringify(newCartItems));
 
       // Show a success message
-      alert(`Added ${itemName} to the cart.`);
+      api["success"]({
+        message: "Success!",
+        description: `Added ${itemName} to the cart.`,
+        duration: 3,
+      });
     }
 
     // Update the state with the new cart items
@@ -89,6 +99,7 @@ export default function ProductDetailPage({
         <title>{product?.product_name} Details</title>
         {/* Add your meta tags and other head elements here */}
       </Head>
+      {contextHolder}
       <div style={{ padding: "20px" }}>
         <Card
           cover={<Image  

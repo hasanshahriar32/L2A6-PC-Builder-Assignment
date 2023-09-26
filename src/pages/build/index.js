@@ -27,12 +27,12 @@ export default function BuildPc({ allCategory }) {
   }
   const handleCompleteBuild = () => {
     // Check if at least 3 items are selected
-    if (JSON.parse(localStorage.getItem("build")).length >= 3) {
+    if (!JSON.parse(localStorage.getItem("build")).length >= 3) {
       // Show a success toast message
       message.success("Build completed successfully!");
     } else {
       message.error(
-        "Please select at least 3 components before completing the build."
+        "Please select all components before completing the build."
       );
     }
   };
@@ -136,7 +136,7 @@ BuildPc.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Head>
-        <title>Checkout Your Product</title>
+        <title>Build Your Product</title>
         <meta
           name="description"
           content="Welcome to our pc building platform. Here you can organize and purchase your desired pc at an affordable rate."

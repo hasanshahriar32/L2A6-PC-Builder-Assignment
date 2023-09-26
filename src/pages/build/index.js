@@ -27,7 +27,7 @@ export default function BuildPc({ allCategory }) {
   }
   const handleCompleteBuild = () => {
     // Check if at least 3 items are selected
-    if (!JSON.parse(localStorage.getItem("build")).length >= 3) {
+    if !(JSON.parse(localStorage.getItem("build")).length >= 3) {
       // Show a success toast message
       message.success("Build completed successfully!");
     } else {
